@@ -1,0 +1,49 @@
+
+#login_box {
+    background-color: #B1F0F7;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin: 5rem auto;
+}
+h1{
+    margin-bottom: 1.5rem;
+}
+
+#username, #password {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+
+#username:focus, #password:focus {
+    border-color: #007bff;
+}
+#signup_link{
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+#btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+#btn:hover {
+    background-color: #0056b3;
+}

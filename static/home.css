@@ -1,0 +1,32 @@
+#content {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px; 
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+#content a {
+    display: block;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#content a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

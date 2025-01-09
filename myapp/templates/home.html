@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'home.css' %}">{% endblock css %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div id="content">
+    <h1>Topics</h1>
+    {% for topic in topics %}
+    <a href="{% url 'subject' topic.name %}">{{ topic.name }}</a>
+    {% endfor %}
+</div>
+{% endblock content %}

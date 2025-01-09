@@ -1,0 +1,13 @@
+<header>
+<nav>
+    <ul class="links">
+        <li><a class="link" href="{% url 'home' %}">HOME</a></li>
+        <li><a class="link" href="{% url 'create-ques' %}">ASK QUESTION</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a class="link" href="{% url 'logout' %}">LOG OUT</a></li>
+        {% else %}
+        <li><a class="link" href="{% url 'login' %}">LOG IN</a></li>
+        {% endif %}
+    </ul>
+</nav>
+</header>

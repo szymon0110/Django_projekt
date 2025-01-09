@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+{% load static %}
+{%block css%}<link rel="stylesheet" href="{% static 'create_ques.css' %}">{% endblock css %}
+{% block content %}
+    
+    <form method="POST">
+        <h1>Create a New Question</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}

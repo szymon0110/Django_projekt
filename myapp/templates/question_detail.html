@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'ques_detail.css' %}">{% endblock css %}
+{% block content %}
+<div class="container">
+    <h3>{{ question.topic }}</h3><br>
+    <h1>{{ question.title}}</h2><br>
+    <h2>{{ question.question }}</h1>
+
+    <h2>Answers:</h2>
+    {% for answer in answers %}
+    <hr>
+    <div class="answer">
+        <p>{{ answer.content }}</p>
+        <p><small>Answered by {{ answer.user.username }} on: {{ answer.created }}</small></p>
+    </div>
+    {% empty %}
+    <p>No answers yet. Be the first to answer!</p>
+    {% endfor %}
+
+    <hr>
+
+    <h3>Your Answer:</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Answer</button>
+    </form>
+</div>
+{% endblock content %}

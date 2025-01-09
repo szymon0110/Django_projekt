@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #79D7BE;
+    font-family: Arial, sans-serif;
+}
+.link{
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #F6F4F0;
+    transition: all 0.3s ease 0s;
+}
+header{
+    background-color: #4DA1A9;
+    display: flex;
+    padding: 30px 10px;
+}
+nav{
+    margin: auto;
+}
+.links li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+.link:hover{
+    color: #2E5077;
+}

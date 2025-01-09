@@ -1,0 +1,77 @@
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #81BFDA;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container h2 {
+    margin-top: 30px;
+    font-size: 1.8rem;
+    color: #555;
+}
+
+.container .answer {
+    background: whitesmoke;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.container .answer p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.container .answer small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.container form {
+    margin-top: 20px;
+}
+
+.container form h3 {
+    margin-bottom: 10px;
+}
+
+.container form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.container form button:hover {
+    background: #0056b3;
+}
+
+
+.container hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}

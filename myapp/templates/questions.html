@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+{%block css%}<link rel="stylesheet" href="{% static 'questions.css' %}">{%endblock css%}
+
+{% block content %}
+<div class="container">
+    <div class="subject">{{ subject }}</div>
+    {% for ques in questions %}
+        <div class="question-item">
+            <div class="metadata">
+                {{ ques.user }} • {{ ques.created }}
+            </div>
+            <a href="{% url 'question' ques.id %}">{{ ques.title }}</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
