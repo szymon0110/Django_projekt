@@ -2,11 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 
+#model przedmiotuu
 class subject(models.Model):
     name = models.CharField(max_length=150,null=False)
     def __str__(self):
         return str(self.name)
-    
+
+#model pytania
 class Question(models.Model):
     user = models.ForeignKey(User,on_delete=CASCADE,null=True)  
     topic = models.ForeignKey(subject, related_name='questions',on_delete=models.SET_NULL,null=True)
@@ -19,7 +21,7 @@ class Question(models.Model):
 
     def __str__(self):
         return self.title
-    
+#model odpowiedzi
 class Answer(models.Model):
     question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)
     content = models.TextField()

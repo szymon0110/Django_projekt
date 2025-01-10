@@ -7,10 +7,12 @@ from .models import Question, subject
 from .forms import AnswerForm, QuesForm, RegistrationForm
 from .forms import RegistrationForm
 
+#strona głowna
 def home(req):
     data = subject.objects.all()
     return render(req,'home.html',{'topics':data})
 
+#lista pytań
 def questions(req,topic):
     c_topic = get_object_or_404(subject, name = topic)
     qs = c_topic.questions.all()
@@ -19,6 +21,7 @@ def questions(req,topic):
     else:
         return render(req,'questions.html',{'questions': qs, 'subject':c_topic})
 
+#tworzenie pytania
 @login_required(login_url='login')
 def create_ques(req):
     form = QuesForm()
@@ -31,6 +34,7 @@ def create_ques(req):
             return redirect('home')
     return render(req,'create_ques.html',{'form':form})
 
+#logowanie użytkownika
 def LoginSite(req):
     if req.method == 'POST':
         username = req.POST.get('username')
@@ -45,11 +49,12 @@ def LoginSite(req):
             messages.error(req,'Invalid username or password!')
 
     return render(req,'Login.html')
-
+#wylogowanie użytkownika
 def UserLogout(req):
     logout(req)
     return redirect('home')
 
+#rejestracja nowego użytkownika
 def SignUpSite(req):
     form = RegistrationForm()
     if req.method == 'POST':
@@ -62,6 +67,7 @@ def SignUpSite(req):
             return redirect('home')
     return render(req,'Register.html', {'form':form})
 
+#system odpowiadania na pytania
 @login_required(login_url='login')
 def question_detail(request, qs_id):
     question = get_object_or_404(Question, id=qs_id)

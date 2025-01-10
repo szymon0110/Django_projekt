@@ -1,0 +1,11 @@
+podstawowa wresja strony głównej(home),
+utowrzenie systemu pytań,
+utworzenie logowania i rejestracja,
+utworzenie systemu odpowiadania na pytania,
+udoskonalenie strony głównej,
+utworzenie css do home, login, rejestracja, pytań i odpowiedzi
+
+
+
+
+
